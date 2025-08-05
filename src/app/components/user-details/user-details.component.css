@@ -1,0 +1,71 @@
+.details-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background: linear-gradient(to right, #e3f2fd, #f3e5f5);
+  min-height: 100vh;
+}
+
+.user-profile-card {
+  width: 100%;
+  max-width: 550px;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.user-profile-card:hover {
+  transform: translateY(-5px);
+}
+
+mat-card-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3f51b5;
+  margin-bottom: 0.3rem;
+}
+
+mat-card-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.user-avatar {
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.info-section p {
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.info-section a {
+  color: #3f51b5;
+  text-decoration: none;
+}
+
+.info-section i {
+  font-size: 1.2rem;
+  color: #3f51b5;
+}
+
+
+.loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+  color: #3f51b5;
+}

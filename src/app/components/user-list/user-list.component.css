@@ -1,0 +1,42 @@
+.user-table-container {
+  padding: 20px;
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+  }
+}
+
+
+.gradient-heading {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+.user-table-wrapper {
+  padding: 20px;
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 576px) {
+  button[mat-button], button[mat-stroked-button] {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+  }
+
+  .mat-header-cell, .mat-cell {
+    padding: 8px !important;
+    font-size: 0.85rem;
+  }
+}
+

@@ -1,0 +1,61 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #343a40;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #495057;
+}
+
+input.form-control {
+  height: 45px;
+  font-size: 1rem;
+}
+
+.invalid-feedback {
+  font-size: 0.9rem;
+}
+
+button.btn {
+  padding: 10px 25px;
+  font-weight: 500;
+}
+
+.alert {
+  font-size: 1rem;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  text-align: center;
+  color: #3f51b5;
+}
+
+
+.gradient-heading {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}

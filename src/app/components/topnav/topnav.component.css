@@ -1,0 +1,26 @@
+.top-nav {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+mat-toolbar a {
+  color: #fff;
+  font-weight: 500;
+  text-transform: none;
+}
+
+mat-toolbar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
