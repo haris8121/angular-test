@@ -33,3 +33,11 @@ canvas {
 .card-footer {
   border-top: 1px solid #eee;
 }
+
+
+.gradient-heading {
+  background: linear-gradient(to right, #0d6efd, #6610f2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
