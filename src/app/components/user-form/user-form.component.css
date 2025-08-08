@@ -59,3 +59,20 @@ button.btn {
   -webkit-text-fill-color: transparent;
   font-weight: 700;
 }
+
+
+@media (min-width: 768px) {
+  .responsive-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .responsive-form .form-group {
+    margin-bottom: 0;
+  }
+
+  .responsive-form .form-group-full {
+    grid-column: span 2;
+  }
+}

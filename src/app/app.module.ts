@@ -18,7 +18,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TopnavComponent } from './components/topnav/topnav.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -34,7 +37,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   imports: [
     BrowserModule,
     AppRoutingModule,NgChartsModule,HttpClientModule, BrowserAnimationsModule,
-      MatTableModule,
+      MatTableModule,MatPaginatorModule,MatInputModule,MatIconModule,MatTooltipModule,
     MatCardModule,
     MatToolbarModule,MatFormFieldModule,
     MatButtonModule,ReactiveFormsModule,MatProgressSpinnerModule

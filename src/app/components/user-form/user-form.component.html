@@ -2,84 +2,72 @@
 
 <div class="container mt-5">
   <div class="card shadow p-4">
-<h2 class="gradient-heading text-center mb-4"> Add New User</h2>
+    <h2 class="gradient-heading text-center mb-4"> Add New User</h2>
 
-          <div class="alert alert-success mt-3" *ngIf="successMessage">{{ successMessage }}</div>
+    <div class="alert alert-success mt-3" *ngIf="successMessage">{{ successMessage }}</div>
 
 
-   <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="row g-3">
 
-  <div class="mb-3">
-    <label for="name" class="form-label">Full Name</label>
-    <input type="text" id="name" class="form-control" formControlName="name" [ngClass]="{'is-invalid': isInvalid('name')}">
-    <div class="invalid-feedback" *ngIf="isInvalid('name')">
-      Full Name is required.
+    <div class="col-12 col-md-6">
+      <label for="name" class="form-label">Full Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name" [ngClass]="{'is-invalid': isInvalid('name')}">
+      <div class="invalid-feedback" *ngIf="isInvalid('name')">Full Name is required.</div>
     </div>
-  </div>
 
-  <div class="mb-3">
-    <label for="username" class="form-label">Username</label>
-    <input type="text" id="username" class="form-control" formControlName="username" [ngClass]="{'is-invalid': isInvalid('username')}">
-    <div class="invalid-feedback" *ngIf="isInvalid('username')">
-      Username is required.
+    <div class="col-12 col-md-6">
+      <label for="username" class="form-label">Username</label>
+      <input type="text" id="username" class="form-control" formControlName="username" [ngClass]="{'is-invalid': isInvalid('username')}">
+      <div class="invalid-feedback" *ngIf="isInvalid('username')">Username is required.</div>
     </div>
-  </div>
 
-  <div class="mb-3">
-    <label for="email" class="form-label">Email</label>
-    <input type="email" id="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid': isInvalid('email')}">
-    <div class="invalid-feedback" *ngIf="isInvalid('email')">
-      Please enter a valid email.
+    <div class="col-12 col-md-6">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" class="form-control" formControlName="email" [ngClass]="{'is-invalid': isInvalid('email')}">
+      <div class="invalid-feedback" *ngIf="isInvalid('email')">Please enter a valid email.</div>
     </div>
-  </div>
 
-  <div class="mb-3">
-    <label for="phone" class="form-label">Phone</label>
-    <input type="number" id="phone" class="form-control" formControlName="phone" [ngClass]="{'is-invalid': isInvalid('phone')}">
-    <div class="invalid-feedback" *ngIf="isInvalid('phone')">
-      Phone is required.
+    <div class="col-12 col-md-6">
+      <label for="phone" class="form-label">Phone</label>
+      <input type="number" id="phone" class="form-control" formControlName="phone" [ngClass]="{'is-invalid': isInvalid('phone')}">
+      <div class="invalid-feedback" *ngIf="isInvalid('phone')">Phone is required.</div>
     </div>
-  </div>
 
-  <div class="mb-3">
-    <label for="website" class="form-label">Website</label>
-    <input type="text" id="website" class="form-control" formControlName="website" [ngClass]="{'is-invalid': isInvalid('website')}">
-    <div class="invalid-feedback" *ngIf="isInvalid('website')">
-      Website is required.
+    <div class="col-12 col-md-6">
+      <label for="website" class="form-label">Website</label>
+      <input type="text" id="website" class="form-control" formControlName="website" [ngClass]="{'is-invalid': isInvalid('website')}">
+      <div class="invalid-feedback" *ngIf="isInvalid('website')">Website is required.</div>
     </div>
-  </div>
 
-  <div class="mb-3">
-    <label for="company" class="form-label">Company</label>
-    <input type="text" id="company" class="form-control" formControlName="company" [ngClass]="{'is-invalid': isInvalid('company')}">
-    <div class="invalid-feedback" *ngIf="isInvalid('company')">
-      Company is required.
+    <div class="col-12 col-md-6">
+      <label for="company" class="form-label">Company</label>
+      <input type="text" id="company" class="form-control" formControlName="company" [ngClass]="{'is-invalid': isInvalid('company')}">
+      <div class="invalid-feedback" *ngIf="isInvalid('company')">Company is required.</div>
     </div>
-  </div>
 
-  <div class="mb-3">
-    <label for="city" class="form-label">City</label>
-    <input type="text" id="city" class="form-control" formControlName="city" [ngClass]="{'is-invalid': isInvalid('city')}">
-    <div class="invalid-feedback" *ngIf="isInvalid('city')">
-      City is required.
+    <div class="col-12 col-md-6">
+      <label for="city" class="form-label">City</label>
+      <input type="text" id="city" class="form-control" formControlName="city" [ngClass]="{'is-invalid': isInvalid('city')}">
+      <div class="invalid-feedback" *ngIf="isInvalid('city')">City is required.</div>
     </div>
+
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary w-100" [disabled]="userForm.invalid || loading">
+        {{ loading ? 'Submitting...' : 'Submit' }}
+      </button>
+    </div>
+
   </div>
-
-  <button type="submit" class="btn btn-primary w-100" [disabled]="userForm.invalid || loading">
-    {{ loading ? 'Submitting...' : 'Submit' }}
-  </button>
-
 </form>
+
 
   </div>
 </div>
 
 
 <div class="loader-wrapper" *ngIf="loading">
-  <mat-progress-spinner
-    color="primary"
-    mode="indeterminate"
-    diameter="50">
+  <mat-progress-spinner color="primary" mode="indeterminate" diameter="50">
   </mat-progress-spinner>
   <p>Loading data...</p>
 </div>

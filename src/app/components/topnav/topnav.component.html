@@ -2,20 +2,32 @@
 
   <span class="logo fw-bold fs-5">Triton IT Solutions</span>
 
-  <span class="spacer d-none d-md-inline"></span>
+  <button class="navbar-toggler d-md-none" type="button" (click)="toggleNavbar()">
+    <i class="bi bi-list text-white fs-3"></i>
+  </button>
 
-  <nav class="d-flex flex-wrap gap-2 justify-content-end mt-2 mt-md-0">
+  <nav class="d-none d-md-flex flex-wrap gap-2 justify-content-end mt-2 mt-md-0">
     <a mat-button routerLink="/">
       <i class="bi bi-speedometer2 me-1"></i> Dashboard
     </a>
-
-    <a mat-button routerLink="/userList">
+    <a mat-button routerLink="/userList">  
       <i class="bi bi-people me-1"></i> Users List
     </a>
-
     <a mat-button routerLink="/userForm">
       <i class="bi bi-person-plus me-1"></i> User Form
     </a>
   </nav>
 
 </mat-toolbar>
+
+<div class="mobile-nav d-md-none" *ngIf="navbarOpen">
+  <a mat-button routerLink="/" (click)="closeNavbar()">
+    <i class="bi bi-speedometer2 me-1"></i> Dashboard
+  </a>
+  <a mat-button routerLink="/userList" (click)="closeNavbar()">
+    <i class="bi bi-people me-1"></i> Users List
+  </a>
+  <a mat-button routerLink="/userForm" (click)="closeNavbar()">
+    <i class="bi bi-person-plus me-1"></i> User Form
+  </a>
+</div>
